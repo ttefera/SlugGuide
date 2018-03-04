@@ -23,6 +23,18 @@ h2 {
   color: navy;
 }
 
+.weather {
+  position: fixed;
+  left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 6px;
+  border-style: none;
+  height: 89.5%;
+  width: 25%;
+  z-index: 1;
+}
+
 .textinfo {
   position: absolute;
   top: 0px;
@@ -99,11 +111,10 @@ h2 {
   font-size: 15px;
 }
 
-.topnav a:hover{
+.topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
 
 .topnav a.active {
   background-color: #2196F3;
@@ -157,8 +168,6 @@ h2 {
   .topnav input[type=text] {
     border: 0px solid #ccc;
   }
-
-
-#videomain{
-  margin-top:55px;
-}
+  #videomain {
+    margin-top: 55px;
+  }
