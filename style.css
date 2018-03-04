@@ -23,6 +23,11 @@ h2 {
   color: navy;
 }
 
+.slugbus{
+  height: 100%;
+  width: 100%;
+}
+
 .weather {
   position: fixed;
   left: 0px;
