@@ -2,37 +2,86 @@
 <html>
 
 <head>
-  <title>Counselor</title>
+  <title>Contact</title>
   <link href="style.css" type="text/css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+  </style>
 </head>
 
 <body>
-
   <div class="topnav">
     <a class="active" href="home.html">Home</a>
-    <a href="video.html">Counselor</a>
-
-    <script>
-      (function() {
-        var cx = '004367944684852158621:rszxpi24pzs';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-      })();
-    </script>
-    <gcse:search enableAutoComplete="true"></gcse:search>
   </div>
 
-  <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+  <h2>Email Your College Counselor</h2>
+  <div><h2> Video Chat Counselors</h2> <div>
+
+  <div class="dropdown" style = "float:left;">
+    <button class="dropbtn">College Affiliation</button>
+    <div class="dropdown-content">
+      <a href="#">Kresge</a>
+      <a href="#">Cowel</a>
+      <a href="#">Stevenson</a>
+      <a href="#">Merril</a>
+      <a href="#">Crown</a>
+      <a href="#">Porter</a>
+      <a href="#">College 9</a>
+      <a href="#">College 10</a>
+      <a href="#">Rachel Carson</a>
+      <a href="#">Oakes</a>
+    </div>
   </div>
-</div>
+  <div class="dropdown" style="float:right;">
+  <button class="dropbtn">Counselors</button>
+  <div class="dropdown-content">
+    <a href="#">James Dunhamn</a>
+    <a href="#">Theresa Liberaum</a>
+    <a href="#">John Johnson</a>
+    <a href="#">Sophia Leaon</a>
+    <a href="#">Fiona Ryder </a>
+  </div>
 
 </body>
+
+</html>
