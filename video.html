@@ -1,58 +1,33 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-  <title>Contact</title>
+  <title>SlugGuide</title>
   <link href="style.css" type="text/css" rel="stylesheet">
 </head>
-
 <body>
-  <div class="topnav">
-    <a class="active" href="home.html">Home</a>
-  </div>
-  <!--<div style="float:left; max-width:50%">
-    <h2>Email Your College Counselor</h2>
+  <!-- OpenTok.js library -->
+  <script src="https://static.opentok.com/v2/js/opentok.js"></script>
+  <script>
+    // credentials
+    var apiKey = '45828062';
+    var sessionId = '1_MX40NTgyODA2Mn5-MTUyMDEzNjY1NjYwMH40SnYySTdDaEE0eGRQL3J0aFUvbytrT1F-UH4';
+    var token =
+      'T1==cGFydG5lcl9pZD00NTgyODA2MiZzaWc9MGNiZTFiMDgwMzYxNDU1OWJkYjJhNmQzOGJlNDgyNjNmZDBkMGZiMjpzZXNzaW9uX2lkPTFfTVg0ME5UZ3lPREEyTW41LU1UVXlNREV6TmpZMU5qWXdNSDQwU25ZeVNUZERhRUUwZUdSUUwzSjBhRlV2Ynl0clQxRi1VSDQmY3JlYXRlX3RpbWU9MTUyMDEzNjY1OCZub25jZT0wLjIxMzc5Nzc2MDgyODczMjI1JnJvbGU9cHVibGlzaGVyJmV4cGlyZV90aW1lPTE1MjAyMjMwNTg=';
 
-   <div class="dropdown">
-    <button class="dropbtn">College Affiliation</button>
-    <div class="dropdown-content">
-      <a href="#">Kresge</a>
-      <a href="#">Cowel</a>
-      <a href="#">Stevenson</a>
-      <a href="#">Merril</a>
-      <a href="#">Crown</a>
-      <a href="#">Porter</a>
-      <a href="#">College 9</a>
-      <a href="#">College 10</a>
-      <a href="#">Rachel Carson</a>
-      <a href="#">Oakes</a>
-    </div>
-  </div>
-</div> -->
-  <div class="pageinfo">
-    <img src="yellow-blue.jpg" class="banner1">
-    <div class="textinfo">
-      <h2>Video Chat Counselors</h2>
-      <div class="mainbody" id="videomain">
-        <img src="yellow-blue-tropical.jpg" class="banner2">
-        <div class="dropdown">
-          <button class="dropbtn">Counselors</button>
-          <ul class="hashtags">
-            <li>
-              <div class="dropdown-content">
-              <a href="#">James Dunhamn</a>
-              <a href="#">Theresa Liberaum</a>
-              <a href="#">John Johnson</a>
-              <a href="#">Sophia Leaon</a>
-              <a href="#">Fiona Ryder </a>
-            </div>
-          </li>
-          </ul>
+    // connect to session
+    var session = OT.initSession(apiKey, sessionId);
 
-        </div>
-      </div>
-    </div>
-  </div>
+    // create publisher
+    var publisher = OT.initPublisher();
+    session.connect(token, function(err) {
+      // publish publisher
+      session.publish(publisher);
+    });
+
+    // create subscriber
+    session.on('streamCreated', function(event) {
+      session.subscribe(event.stream);
+    });
+  </script>
 </body>
 
 </html>
